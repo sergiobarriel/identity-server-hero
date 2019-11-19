@@ -28,3 +28,21 @@ var tokenClient = new TokenClient(httpClient, new TokenClientOptions()
 
 var tokenResponse = await tokenClient.RequestPasswordTokenAsync(credentials.username, credentials.password);
 ```
+
+### Implicit 
+...
+
+### How to add Identity Server UI
+
+On solution folder:
+
+```bash
+$ dotnet new -i identityserver4.templates
+```
+
+On identity server 4 project folder:
+
+```bash
+$ cd Superheros.IdentityServer
+$ dotnet new is4ui
+```

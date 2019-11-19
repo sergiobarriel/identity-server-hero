@@ -1,6 +1,7 @@
 ﻿using IdentityServer4.Models;
-using System.Collections.Generic;
 using IdentityServer4.Test;
+using System.Collections.Generic;
+using IdentityServer4;
 
 namespace Superheros.IdentityServer
 {
@@ -18,6 +19,7 @@ namespace Superheros.IdentityServer
         {
             return new List<Client>()
             {
+                // Client credentials flow
                 new Client()
                 {
                     ClientId = "console-client-one",
@@ -29,6 +31,8 @@ namespace Superheros.IdentityServer
                     },
                     AllowedScopes = { "superhero-api" }
                 },
+                
+                // Resource owner password flow
                 new Client()
                 {
                     ClientId = "console-client-two",
@@ -40,18 +44,42 @@ namespace Superheros.IdentityServer
                     },
                     AllowedScopes = { "superhero-api" }
                 },
+
+                // Implicit flow
+                new Client()
+                {
+                    ClientId = "web-client-one",
+                    ClientName = "Web client with implicit flow",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedScopes = new List<string>()
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                    },
+                    RedirectUris = { "https://localhost:5005/signin-oidc" },
+                    PostLogoutRedirectUris = {"https://localhost:5005/signout-callback-oidc"}
+                },
+            };
+        }
+
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>()
+            {
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile(),
             };
         }
 
         public static IEnumerable<TestUser> GetUsers()
         {
-           return new List<TestUser>()
+            return new List<TestUser>()
            {
                new TestUser()
                {
                    SubjectId = "1",
                    Username = "username",
-                   Password = "password"                   
+                   Password = "password"
                },
                new TestUser()
                {

@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheros.API", "Superheros.API\Superheros.API.csproj", "{3F452C4B-9621-4578-9BA1-CCFBC621E137}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Superheros.API", "Superheros.API\Superheros.API.csproj", "{3F452C4B-9621-4578-9BA1-CCFBC621E137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheros.IdentityServer", "Superheros.IdentityServer\Superheros.IdentityServer.csproj", "{C83B56B5-CC40-4F04-890A-E6B4BDC6B3F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Superheros.IdentityServer", "Superheros.IdentityServer\Superheros.IdentityServer.csproj", "{C83B56B5-CC40-4F04-890A-E6B4BDC6B3F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheros.Console", "Superheros.Console\Superheros.Console.csproj", "{03D44F1D-04F4-41CA-B723-5466801CBFC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Superheros.Console", "Superheros.Console\Superheros.Console.csproj", "{03D44F1D-04F4-41CA-B723-5466801CBFC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheros.WebClient", "Superheros.WebClient\Superheros.WebClient.csproj", "{87A39A1B-5E07-4E85-BCE8-198C92203D90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{03D44F1D-04F4-41CA-B723-5466801CBFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03D44F1D-04F4-41CA-B723-5466801CBFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03D44F1D-04F4-41CA-B723-5466801CBFC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A39A1B-5E07-4E85-BCE8-198C92203D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A39A1B-5E07-4E85-BCE8-198C92203D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A39A1B-5E07-4E85-BCE8-198C92203D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A39A1B-5E07-4E85-BCE8-198C92203D90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
