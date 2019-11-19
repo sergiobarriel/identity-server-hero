@@ -2,6 +2,9 @@
 ## Examples of grant types for different use cases.
 
 ### Client credentials
+
+![screenshot](https://github.com/sergiobarriel/identity-server-hero/blob/master/img/client_credentials.PNG)
+
 [Go to implementation](https://github.com/sergiobarriel/identity-server-hero/blob/master/Superheros/Superheros.Console/Flows/ClientCredentialsFlow.cs)
 
 ```csharp
@@ -16,6 +19,9 @@ var tokenResponse = await tokenClient.RequestClientCredentialsTokenAsync(_config
 ```
 
 ### Resource owner password
+
+![screenshot](https://github.com/sergiobarriel/identity-server-hero/blob/master/img/resource_owner_password.PNG)
+
 [Go to implementation](https://github.com/sergiobarriel/identity-server-hero/blob/master/Superheros/Superheros.Console/Flows/ResourceOwnerPasswordFlow.cs)
 
 ```csharp
