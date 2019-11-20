@@ -33,6 +33,8 @@ namespace Superheros.API
             services.AddMapperService();
 
             services.AddMvcService();
+
+            services.AddSwaggerService();
         }
 
         public void Configure(IApplicationBuilder application, IHostingEnvironment environment)
@@ -50,6 +52,8 @@ namespace Superheros.API
 
             application.UseHttpsRedirection();
             application.UseMvc();
+
+            application.UseSwaggerService();
         }
     }
 }
