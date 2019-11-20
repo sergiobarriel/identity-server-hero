@@ -59,6 +59,18 @@ namespace Superheros.IdentityServer
                     RedirectUris = { "https://localhost:5005/signin-oidc" },
                     PostLogoutRedirectUris = {"https://localhost:5005/signout-callback-oidc"}
                 },
+
+                // Implicit flow for Swagger
+                new Client()
+                {
+                    ClientId = "web-client-swagger",
+                    ClientName = "Web client for Swagger service",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedScopes = { "superhero-api" },
+                    RedirectUris = { "https://localhost:5003/oauth2.redirect.html" },
+                    PostLogoutRedirectUris = {"https://localhost:5003/swagger"},
+                    AllowAccessTokensViaBrowser = true,
+                }
             };
         }
 
